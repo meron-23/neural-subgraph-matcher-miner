@@ -61,26 +61,24 @@ def parse_decoder(parser):
 
     # Set default values
     parser.set_defaults(
-        # Dataset defaults
-        dataset="amazon_graph",
-        batch_size=2000,
-        
-        # Decoder defaults
-        out_path="results/amazon_motifs.p",
-        n_neighborhoods=300,
-        n_trials=150,
+        dataset="email_graph",
+        batch_size=512,
+
+        out_path="results/email_motifs.p",
+        n_neighborhoods=50,
+        n_trials=250,
         decode_thresh=0.5,
-        radius=2,
-        subgraph_sample_size=100,
-        sample_method="tree",
+        radius=1,
+        subgraph_sample_size=50,
+        sample_method="radial",
         skip="learnable",
         graph_type="undirected",
-        min_pattern_size=4,
-        max_pattern_size=7,
-        min_neighborhood_size=100,
-        max_neighborhood_size=400,
+        min_pattern_size=3,
+        max_pattern_size=6,
+        min_neighborhood_size=20,
+        max_neighborhood_size=100,
         search_strategy="greedy",
         out_batch_size=5,
         node_anchored=True,
-        memory_limit=5000000
+        memory_limit=2000000
     )
