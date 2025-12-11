@@ -72,7 +72,7 @@ def parse_decoder(parser):
         subgraph_sample_size=50,
         sample_method="radial",
         skip="learnable",
-        graph_type="undirected",
+        graph_type="directed",
         min_pattern_size=3,
         max_pattern_size=6,
         min_neighborhood_size=20,
