@@ -62,25 +62,25 @@ def parse_decoder(parser):
     # Set default values
     parser.set_defaults(
         # Dataset defaults
-        dataset="enzymes",
-        batch_size=1000,
+        dataset="amazon_graph",
+        batch_size=2000,
         
         # Decoder defaults
-        out_path="results/out-patterns.p",
-        n_neighborhoods=100,
-        n_trials=100,
+        out_path="results/amazon_motifs.p",
+        n_neighborhoods=300,
+        n_trials=150,
         decode_thresh=0.5,
-        radius=3,
-        subgraph_sample_size=0,
+        radius=2,
+        subgraph_sample_size=100,
         sample_method="tree",
         skip="learnable",
-        graph_type="directed",
-        min_pattern_size=3,
-        max_pattern_size=5,
-        min_neighborhood_size=2,
-        max_neighborhood_size=3,
+        graph_type="undirected",
+        min_pattern_size=4,
+        max_pattern_size=7,
+        min_neighborhood_size=100,
+        max_neighborhood_size=400,
         search_strategy="greedy",
-        out_batch_size=3,
+        out_batch_size=5,
         node_anchored=True,
-        memory_limit=1000000
+        memory_limit=5000000
     )
