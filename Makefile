@@ -1,4 +1,4 @@
-DATASET=metta.pkl
+DATASET=amazon_graph.pkl
 COUNTS=results/
 
 .PHONY: all matcher miner counter analyze
